@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Antes e Depois</h1>
+    <div class="calc">
+        <button onclick="btn()">Antecessor e Sucessor</button>
+    </div>
+</body>
+<script>
+    function btn(){
+        const calc= document.getElementsByClassName("calc")
+        //Foi preciso colocar "number" antes de prompt, pq o programa estava
+        //identificando como string na soma então em vez de 5+1= 6, estava 51
+        const number= Number(prompt("Digite um número qualquer?"))
+        //Determina o número anterior
+        const antecessor= number-1;
+        //Determina o número seguinte
+        const sucessor= number + 1;
+        window.alert(`Antes de ${number} temos o número ${antecessor} e depois de ${number} temos o número ${sucessor}`)
+    }
+</script>
+</html>
