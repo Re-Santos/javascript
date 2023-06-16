@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculando o troco</h1>
+    <div class="calc">
+        <button onclick="btn()">Comprar produto</button>
+    </div>
+</body>
+<script>
+    function btn(){
+        const product= prompt("Que produto você está comprando?");
+        const price= prompt(`Quanto custa ${product}, que você está comprando?`);
+        const money= prompt(`Qual foi o valor que você deu para pagar ${product}?`);
+        const moneyChange= money - price
+        window.alert (`Você comprou ${product} que custou ${price}.
+        Deu R$ ${money} em dinheiro e vai receber R$ ${moneyChange} de troco.
+        Volte Sempre!`)
+    }   
+</script>
+</html>
