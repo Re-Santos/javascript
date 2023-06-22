@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Conversor R$ => US$</h1>
+    
+    <button onClick="btn()">Converter</button>
+    <h2>Clique no botão acima para iniciar</h2>
+<section id="resultado">
+    <p>resultado</p>
+</section>
+<script>
+    //solicita valor ao usuário valor do dolár no dia
+    
+    let cotacaoDolar = Number(prompt("Antes de mais nada. Quanto está a cotação do dólar agora?"))
+    
+    //solicita ao usuário valor em carteira
+    function btn() {
+        let valorCarteira = Number(prompt("Quantos R$ você tem na carteira?"))
+   
+        let resultado = document.getElementById("resultado")
+         
+        resultado.innerHTML = `Seu Valor em dólar é ${cotacaoDolar*valorCarteira}`
+    }
+</script>
+</body>
+</html>
