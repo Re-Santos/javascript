@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    button{
+        padding: 15px;
+        font-size: 15px;
+    }
+    section p {
+        font-size:20px;
+        line-height: 25px;
+    }
+</style>
+</head>
+<body>
+    <h1><strong>Calcular Desconto</strong></h1>
+    
+    <button onClick="btn()">Desconto de 10%</button>
+    <h2>Clique no botão acima para iniciar</h2>
+<section id="resultado">
+    <p>Resultado</p>
+</section>
+<script>
+    function btn(){
+        let produto = prompt("Qual o produto que está sendo comprado?")
+        let preco = prompt(`Qual é o preço de ${produto}`) 
+        
+        const resultado = document.getElementById('resultado')
+        resultado.innerHTML = `<h1><strong> Calculando desconto de 10% para ${produto}</strong></h1>
+            <p>
+            O preço original era R$ ${preco}<br>
+            Você acaba de ganhar R$ ${preco*10/100} de desconto (-10%)<br>
+            No fim, você vai pagar R$ ${preco - preco*10/100} no produto ${produto}
+            </p>`
+            
+
+    }
+</script>
+</body>
+</html>
